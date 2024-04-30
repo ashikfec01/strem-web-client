@@ -1,0 +1,44 @@
+<div class="container">
+  <form [formGroup]="form"
+        (ngSubmit)="onSubmit(form)">
+    <section>
+      <label>Living room</label>
+      <input matInput
+             formControlName="meet"
+             placeholder="Living room" />
+      <small>
+        This code was randomly
+        generated, but it
+        is possible
+        change it
+      </small>
+    </section>
+
+    <section>
+      <label>Nickname</label>
+      <input autofocus
+             formControlName="nickname"
+             placeholder="What is your nickname?" />
+    </section>
+
+    <footer>
+      <button mat-flat-button
+              color="primary"
+              [disabled]="form.disabled">Enter
+        the room</button>
+    </footer>
+  </form>
+
+  <!-- <mat-card>
+    <p>
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
+    </p>
+    <mat-card-content>
+      <mat-card-title translate>Hello world !</mat-card-title>
+      <mat-card-subtitle>
+        <app-loader [isLoading]="isLoading" [size]="1.5"></app-loader>
+        <q [hidden]="isLoading">{{quote}}</q>
+      </mat-card-subtitle>
+    </mat-card-content>
+  </mat-card> -->
+</div>
